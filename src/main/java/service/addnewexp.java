@@ -19,9 +19,11 @@ public class addnewexp {
           String path = "C:\\Users\\swapn\\Desktop\\Code\\Calculator\\expencetracker\\json\\addnewexp.json";
         FileReader reader = new FileReader(path);
         Type type = new TypeToken<List<Expense>>() {}.getType();
-
+        System.out.println("lalalalal");
         List<Expense> expenses = gson.fromJson(reader, type);
-        System.out.println(Expense.getDetail());
+        for (Expense expense : expenses) {
+            System.out.println(expense.getDetail());
+        }
 
     }
 }

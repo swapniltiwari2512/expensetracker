@@ -1,8 +1,9 @@
 package model;
 
 public class Expense {
-    int number;
-    static String Detail;
+
+    private int number;
+    private String detail;
 
     public int getNumber() {
         return number;
@@ -12,14 +13,11 @@ public class Expense {
         this.number = number;
     }
 
-    public static String getDetail() {
-        return Detail;
+    public String getDetail() {
+        return detail;
     }
 
     public void setDetail(String detail) {
-        Detail = detail;
+        this.detail = detail;
     }
-
-
-
 }
