@@ -1,0 +1,14 @@
+[
+  {
+    "number" : 1,
+    "Detail" :" Add new expense"
+  },
+  {
+    "number" : 2,
+    "Detail" :" Modify existing entry"
+  },
+  {
+    "number" : 3,
+    "Detail" :" Exit"
+  }
+]
