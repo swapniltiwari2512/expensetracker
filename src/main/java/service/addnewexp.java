@@ -1,29 +1,19 @@
 package service;
 
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.lang.reflect.Type;
-import java.util.List;
 import java.util.Scanner;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import model.Expense;
+import util.filereader;
 
 public class addnewexp {
     public static void expAdder() throws FileNotFoundException {
 
-        System.out.println("Refer the below format to provide input");
+        System.out.println("Refer the below format to save entry");
 
-          Scanner sc = new Scanner(System.in);
-          Gson gson  = new Gson();
-          String path = "C:\\Users\\swapn\\Desktop\\Code\\Calculator\\expencetracker\\json\\addnewexp.json";
-        FileReader reader = new FileReader(path);
-        Type type = new TypeToken<List<Expense>>() {}.getType();
-        System.out.println("lalalalal");
-        List<Expense> expenses = gson.fromJson(reader, type);
-        for (Expense expense : expenses) {
-            System.out.println(expense.getDetail());
-        }
+        String path = "C:\\Users\\swapn\\Desktop\\Code\\Calculator\\expencetracker\\json\\addnewexp.json";
+
+        filereader.jsonreader(path);
+        Scanner sc = new Scanner(System.in);
+
 
     }
 }
